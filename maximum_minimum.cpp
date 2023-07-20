@@ -1,6 +1,6 @@
 #include<iostream>
 #include<climits>
-#include"input_output.cpp" 
+#include"input_output.cpp" //file is given in the rpository 
 using namespace std;
 
 
@@ -8,7 +8,7 @@ void find_maximum_minimum(int* arr , int n , int* max , int* min);
 
 int main()
 {       
-    int n ; //n is size of an array in 
+    int n ; //n is size of an array 
         cin>>n;
 
     int* arr = new int[n]; //way of declararing array with dynamic memory location
@@ -53,13 +53,16 @@ find_maximum_minimum( arr , n ,max , min);
 cout<<endl<<"Maximum number in an array : "<<maximum_in_array<<endl;
     cout<<"Minimum number in an array : "<<minimum_in_array<<endl;
 
+//free the dynamically allocated memory with delete keyword in c++ and free keyword in c {good practise for coder }
+   
+    delete[] arr;      // reason: if not delete this , them memory lekage and bad effect on our code {bad practise}
 
     return 0;
 }
 
 void find_maximum_minimum(int* arr , int n , int* max , int* min )
 {
-   
+   // Worst Case Time Complexity : O(n)
 
     for( int i = 0 ; i < n ; i++)
     {
