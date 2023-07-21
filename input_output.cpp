@@ -1,4 +1,6 @@
 #include<iostream>
+#include<cstdlib>
+
 using namespace std;
 
 #define scaling_factor 100000
@@ -29,4 +31,21 @@ void random(int* arr ,int n)
     {
         arr[i] = rand() % scaling_factor + shifting_value ;
     }
+}
+
+void input_char_array(char* arr , int n)
+{
+    for(int i = 0 ; i < n ; i++)
+    {
+            cin>>arr[i];
+    }
+}
+
+void print_char_array(char* arr , int n)
+{
+    cout<<"Given cahacters is : ";
+        for( int i = 0 ; i < n ; i++ ) 
+         {
+            cout<<arr[i]<<" ";     // here ,we print all data in an array from indice 0 to n-1
+         }
 }
