@@ -34,6 +34,8 @@ char* arr = new char[n];
     
 
 
+// Free the dynamically memorry which is very important else memory leakage happens 
+      delete[] arr;
 
 
         return 0;
