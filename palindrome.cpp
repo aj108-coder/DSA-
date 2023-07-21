@@ -1,8 +1,8 @@
 #include<iostream>
-#include"input_output.cpp"
+#include"input_output.cpp" 
 using namespace std;
 
-bool check_palindrome( char* arr , int n);
+bool check_palindrome( char* arr , int n); 
 
 int main()
 {   
@@ -13,10 +13,11 @@ int main()
 char* arr = new char[n];
 
 //input the caharcters in an array from 0 to n-1
-    input_char_array(arr , n);
+    input_char_array(arr , n);  // the definition of function are mentioned in "input_output.cpp" and whithout including this file ----> Error
 
 //print the array 
-    print_char_array(arr , n);
+    print_char_array(arr , n);  // the definition of function are mentioned in "input_output.cpp" and whithout including this file ----> Error
+
 
 //call palindrome function by reference to check the array is palindrome or not
     bool is_palindrome = check_palindrome( arr , n);
